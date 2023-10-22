@@ -5,7 +5,7 @@ export class Game extends Phaser.Scene {
 
     constructor() {
         super({ key: 'game' });
-        this.score = 0;
+        this.score;
 
     }
 
@@ -217,7 +217,7 @@ export class Game extends Phaser.Scene {
         this.physics.add.collider(this.hearts, this.platform);
 
         this.physics.add.overlap(this.player, this.hearts, this.collectHearts, null, this);
-        this.scoreText = this.add.text(130, 16, 'Score: 0', { font: '32px Arial', fill: '#000' });
+        this.scoreText = this.add.text(130, 16, 'Score: 300', { font: '32px Arial', fill: '#000' });
 
         this.physics.add.collider(this.player, this.enemy, this.hitEnemy, null, this);
         this.physics.add.collider(this.player, this.enemy1, this.hitEnemy, null, this);
@@ -280,27 +280,27 @@ export class Game extends Phaser.Scene {
             this.moveEnemy(this.enemy2, 50, 115, 678);
         }
         if (this.score < 258 && this.score >= 216) {
-            this.moveEnemy(this.enemy, 100, 115, 678);
-            this.moveEnemy(this.enemy1, 100, 220, 570);
-            this.moveEnemy(this.enemy2, 100, 115, 678);
+            this.moveEnemy(this.enemy, 70, 115, 678);
+            this.moveEnemy(this.enemy1, 70, 220, 570);
+            this.moveEnemy(this.enemy2, 70, 115, 678);
         }
         if (this.score < 216 && this.score >= 174) {
-            this.moveEnemy(this.enemy, 150, 115, 678);
-            this.moveEnemy(this.enemy1, 150, 220, 570);
-            this.moveEnemy(this.enemy2, 150, 115, 678);
+            this.moveEnemy(this.enemy, 90, 115, 678);
+            this.moveEnemy(this.enemy1, 90, 220, 570);
+            this.moveEnemy(this.enemy2, 90, 115, 678);
         }
         if (this.score < 174 && this.score >= 132) {
             this.moveEnemy2(this.enemy, 30);
-            this.moveEnemy(this.enemy1, 150, 220, 570);
-            this.moveEnemy(this.enemy2, 150, 115, 678);
+            this.moveEnemy(this.enemy1, 110, 220, 570);
+            this.moveEnemy(this.enemy2, 110, 115, 678);
         }
         if (this.score < 132 && this.score >= 90) {
-            this.moveEnemy2(this.enemy, 60);
-            this.moveEnemy(this.enemy1, 150, 220, 570);
-            this.moveEnemy(this.enemy2, 150, 115, 678);
+            this.moveEnemy2(this.enemy, 35);
+            this.moveEnemy(this.enemy1, 130, 220, 570);
+            this.moveEnemy(this.enemy2, 130, 115, 678);
         }
         if (this.score < 90 && this.score >= 0) {
-            this.moveEnemy2(this.enemy, 80);
+            this.moveEnemy2(this.enemy, 40);
             this.moveEnemy(this.enemy1, 150, 220, 570);
             this.moveEnemy(this.enemy2, 150, 115, 678);
             this.enemy3.visible = true;
